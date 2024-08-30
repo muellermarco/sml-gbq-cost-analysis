@@ -1,0 +1,6 @@
+unique_name: m_query_log_total_bytes_processed_sum
+object_type: metric
+label: Total Bytes Processed
+calculation_method: sum
+column: total_bytes_processed
+dataset: query_log

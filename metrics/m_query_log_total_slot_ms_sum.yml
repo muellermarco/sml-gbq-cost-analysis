@@ -1,0 +1,6 @@
+unique_name: m_query_log_total_slot_ms_sum
+object_type: metric
+label: Total Slot Ms
+calculation_method: sum
+column: total_slot_ms
+dataset: query_log

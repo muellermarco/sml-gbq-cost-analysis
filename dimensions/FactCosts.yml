@@ -1,0 +1,6 @@
+unique_name: FactCosts
+object_type: dimension
+label: FactCosts
+hierarchies: []
+level_attributes: []
+type: standard

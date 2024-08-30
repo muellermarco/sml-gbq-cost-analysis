@@ -1,0 +1,10 @@
+unique_name: gbq costs
+object_type: model
+label: gbq costs
+dimensions:
+  - dim_user_atscale
+  - Creation_Date
+metrics:
+  - unique_name: m_query_log_total_bytes_processed_sum
+  - unique_name: m_query_log_total_slot_ms_sum
+relationships: []

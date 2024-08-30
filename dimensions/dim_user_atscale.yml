@@ -1,0 +1,18 @@
+unique_name: dim_user_atscale
+object_type: dimension
+label: Dim User AtScale
+hierarchies:
+  - unique_name: AtScale_User_Hierarchy
+    label: AtScale User Hierarchy
+    levels:
+      - unique_name: AtScale_User
+is_degenerate: true
+level_attributes:
+  - unique_name: AtScale_User
+    label: AtScale User
+    contains_unique_names: false
+    dataset: query_log
+    key_columns:
+      - AtScaleUser
+    name_column: AtScaleUser
+type: standard

@@ -1,0 +1,78 @@
+unique_name: Creation_Date
+object_type: dimension
+label: Dim Date
+hierarchies:
+  - unique_name: date_week_hierarchy
+    label: Date Week Hierarchy
+    levels:
+      - unique_name: Year1
+      - unique_name: week_id
+      - unique_name: date1
+  - unique_name: date_month_hierarchy
+    label: Date Month hierarchy
+    levels:
+      - unique_name: Year1
+      - unique_name: Month
+      - unique_name: date1
+is_degenerate: true
+level_attributes:
+  - unique_name: date1
+    label: Date
+    contains_unique_names: false
+    dataset: query_log
+    key_columns:
+      - creation_date
+    name_column: creation_date
+    sort_column: creation_date
+    time_unit: day
+  - unique_name: week_id
+    label: week_id
+    contains_unique_names: false
+    dataset: query_log
+    is_unique_key: false
+    key_columns:
+      - week_id
+    name_column: Week
+    sort_column: week_id
+    time_unit: week
+  - unique_name: Year1
+    label: Year
+    contains_unique_names: false
+    dataset: query_log
+    is_unique_key: false
+    key_columns:
+      - Year
+    name_column: YearName
+    sort_column: Year
+    time_unit: year
+  - unique_name: Month
+    label: Month
+    contains_unique_names: false
+    dataset: query_log
+    is_unique_key: false
+    key_columns:
+      - Month
+    name_column: MonthName
+    sort_column: Month
+    time_unit: month
+  - unique_name: date
+    label: Date
+    contains_unique_names: false
+    dataset: query_log
+    is_unique_key: false
+    key_columns:
+      - creation_date
+    name_column: creation_date
+    sort_column: creation_date
+    time_unit: day
+  - unique_name: Year
+    label: Year
+    contains_unique_names: false
+    dataset: query_log
+    is_unique_key: false
+    key_columns:
+      - Year
+    name_column: YearName
+    sort_column: Year
+    time_unit: year
+type: time
