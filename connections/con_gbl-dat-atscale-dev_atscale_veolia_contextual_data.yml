@@ -1,6 +1,6 @@
 unique_name: con_gbl-dat-atscale-dev_atscale_veolia_contextual_data
 object_type: connection
 label: con_gbl-dat-atscale-dev_atscale_veolia_contextual_data
-as_connection: gbq_veolia
-database: gbl-dat-atscale-dev
-schema: atscale_veolia_contextual_data
+as_connection: gbq
+database: atscale-sales-demo
+schema: atscale
