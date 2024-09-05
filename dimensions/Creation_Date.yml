@@ -8,12 +8,32 @@ hierarchies:
       - unique_name: Year1
       - unique_name: week_id
       - unique_name: date1
-  - unique_name: date_month_hierarchy
-    label: Date Month hierarchy
-    levels:
-      - unique_name: Year1
-      - unique_name: Month
-      - unique_name: date1
+      - unique_name: timestamp_id
+        secondary_attributes:
+          - unique_name: second
+            label: second
+            contains_unique_names: false
+            dataset: query_log
+            is_unique_key: false
+            key_columns:
+              - second
+            name_column: second
+          - unique_name: minute
+            label: minute
+            contains_unique_names: false
+            dataset: query_log
+            is_unique_key: false
+            key_columns:
+              - minute
+            name_column: minute
+          - unique_name: hour
+            label: hour
+            contains_unique_names: false
+            dataset: query_log
+            is_unique_key: false
+            key_columns:
+              - hour
+            name_column: hour
 is_degenerate: true
 level_attributes:
   - unique_name: date1
@@ -45,16 +65,16 @@ level_attributes:
     name_column: YearName
     sort_column: Year
     time_unit: year
-  - unique_name: Month
-    label: Month
+  - unique_name: timestamp_id
+    label: timestamp_id
     contains_unique_names: false
     dataset: query_log
     is_unique_key: false
     key_columns:
-      - Month
-    name_column: MonthName
-    sort_column: Month
-    time_unit: month
+      - timestamp_id
+    name_column: timestamp_id
+    sort_column: timestamp_id
+    time_unit: second
   - unique_name: date
     label: Date
     contains_unique_names: false

@@ -3,6 +3,7 @@ object_type: model
 label: gbq costs
 dimensions:
   - dim_user_atscale
+  - atscale_query_id
   - Creation_Date
 metrics:
   - unique_name: m_query_log_total_bytes_processed_sum
