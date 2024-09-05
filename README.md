@@ -5,6 +5,7 @@ This project offers the possibility to create an AtScale model based on the GBQ 
 ### Settings
 
 **Add atscale engine prooperties**
+
 `query.includeComments.general.userId = True`
 `query.includeComments.general.queryId = True`
 
