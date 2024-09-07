@@ -3,4 +3,4 @@ object_type: connection
 label: gbq-log-data
 as_connection: gbq
 database: atscale-sales-demo
-schema: atscale
+schema: mm_dataset
