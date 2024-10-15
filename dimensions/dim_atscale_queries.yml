@@ -1,0 +1,36 @@
+unique_name: dim_atscale_queries
+object_type: dimension
+label: Dim AtScale Queries
+hierarchies:
+  - unique_name: atscale_queries_hierarchy
+    label: AtScale Queries Hierarchy
+    levels:
+      - unique_name: main_catalogId
+      - unique_name: main_modelId
+      - unique_name: atscale_query
+level_attributes:
+  - unique_name: atscale_query
+    label: AtScale Query
+    contains_unique_names: false
+    dataset: twinpines_queries
+    is_unique_key: false
+    key_columns:
+      - subquery_subqueryId
+    name_column: subquery_subqueryId
+  - unique_name: main_modelId
+    label: main_modelId
+    contains_unique_names: false
+    dataset: twinpines_queries
+    is_unique_key: false
+    key_columns:
+      - main_modelId
+    name_column: main_modelName
+  - unique_name: main_catalogId
+    label: Catalog
+    contains_unique_names: false
+    dataset: twinpines_queries
+    is_unique_key: false
+    key_columns:
+      - main_catalogId
+    name_column: main_catalogName
+type: standard

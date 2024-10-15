@@ -38,7 +38,7 @@ columns:
     data_type: long
   - name: second
     data_type: long
-connection_id: con_gbl-dat-atscale-dev_atscale_veolia_contextual_data
+connection_id: gbq-log-data
 sql: >
   SELECT
 
@@ -86,10 +86,11 @@ sql: >
   --referenced_tables.table_id
 
   FROM
-    `region-EU`.INFORMATION_SCHEMA.JOBS INF
+    `region-US`.INFORMATION_SCHEMA.JOBS INF
   WHERE
 
-  INF.user_email in('atscale-sales-demo@atscale-sales-demo.iam.gserviceaccount.com','benchmark@benchmark-251817.iam.gserviceaccount.com')
+  INF.user_email
+  in('atscale-sales-demo@atscale-sales-demo.iam.gserviceaccount.com','benchmark@benchmark-251817.iam.gserviceaccount.com','jenkins-user@ci-pipeline-199520.iam.gserviceaccount.com','marco.muller@atscale.com')
   and INF.total_bytes_billed > 0
 
   ORDER BY creation_time  desc

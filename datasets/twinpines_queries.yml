@@ -1,0 +1,42 @@
+unique_name: twinpines_queries
+object_type: dataset
+label: twinpines_queries
+columns:
+  - name: event_name
+    data_type: string
+  - name: event_startTime
+    data_type: datetime
+  - name: event_duration
+    data_type: long
+  - name: event_queryId
+    data_type: string
+  - name: main_traceId
+    data_type: string
+  - name: main_queryId
+    data_type: string
+  - name: main_startTime
+    data_type: datetime
+  - name: main_duration
+    data_type: long
+  - name: main_modelId
+    data_type: string
+  - name: main_catalogId
+    data_type: string
+  - name: main_userId
+    data_type: string
+  - name: main_queryType
+    data_type: string
+  - name: main_catalogName
+    data_type: string
+  - name: main_modelName
+    data_type: string
+  - name: main_user
+    data_type: string
+  - name: subquery_subqueryId
+    data_type: string
+  - name: subquery_name
+    data_type: string
+  - name: subquery_duration
+    data_type: double
+connection_id: gbq-log-data
+table: twinpines_queries
