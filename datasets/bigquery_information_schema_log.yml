@@ -1,6 +1,6 @@
-unique_name: query_log
+unique_name: bigquery_information_schema_log
 object_type: dataset
-label: query_log
+label: bigquery_information_schema_log
 columns:
   - name: user_email
     data_type: string

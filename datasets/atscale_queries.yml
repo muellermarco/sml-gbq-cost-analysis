@@ -1,6 +1,6 @@
-unique_name: twinpines_queries
+unique_name: atscale_queries
 object_type: dataset
-label: twinpines_queries
+label: atscale_queries
 columns:
   - name: event_name
     data_type: string

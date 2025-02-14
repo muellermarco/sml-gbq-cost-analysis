@@ -1,19 +1,19 @@
-unique_name: Creation_Date
+unique_name: d_date
 object_type: dimension
 label: Dim Date
 hierarchies:
   - unique_name: date_week_hierarchy
     label: Date Week Hierarchy
     levels:
-      - unique_name: Year1
-      - unique_name: week_id
-      - unique_name: date1
-      - unique_name: timestamp_id
+      - unique_name: year
+      - unique_name: week
+      - unique_name: date
+      - unique_name: timestamp
         secondary_attributes:
           - unique_name: second
             label: second
             contains_unique_names: false
-            dataset: query_log
+            dataset: bigquery_information_schema_log
             is_unique_key: false
             key_columns:
               - second
@@ -21,7 +21,7 @@ hierarchies:
           - unique_name: minute
             label: minute
             contains_unique_names: false
-            dataset: query_log
+            dataset: bigquery_information_schema_log
             is_unique_key: false
             key_columns:
               - minute
@@ -29,70 +29,50 @@ hierarchies:
           - unique_name: hour
             label: hour
             contains_unique_names: false
-            dataset: query_log
+            dataset: bigquery_information_schema_log
             is_unique_key: false
             key_columns:
               - hour
             name_column: hour
 is_degenerate: true
 level_attributes:
-  - unique_name: date1
+  - unique_name: date
     label: Date
     contains_unique_names: false
-    dataset: query_log
+    dataset: bigquery_information_schema_log
     key_columns:
       - creation_date
     name_column: creation_date
     sort_column: creation_date
     time_unit: day
-  - unique_name: week_id
-    label: week_id
+  - unique_name: week
+    label: Week
     contains_unique_names: false
-    dataset: query_log
+    dataset: bigquery_information_schema_log
     is_unique_key: false
     key_columns:
       - week_id
     name_column: Week
     sort_column: week_id
     time_unit: week
-  - unique_name: Year1
+  - unique_name: year
     label: Year
     contains_unique_names: false
-    dataset: query_log
+    dataset: bigquery_information_schema_log
     is_unique_key: false
     key_columns:
       - Year
     name_column: YearName
     sort_column: Year
     time_unit: year
-  - unique_name: timestamp_id
-    label: timestamp_id
+  - unique_name: timestamp
+    label: Timestamp
     contains_unique_names: false
-    dataset: query_log
+    dataset: bigquery_information_schema_log
     is_unique_key: false
     key_columns:
       - timestamp_id
     name_column: timestamp_id
     sort_column: timestamp_id
     time_unit: second
-  - unique_name: date
-    label: Date
-    contains_unique_names: false
-    dataset: query_log
-    is_unique_key: false
-    key_columns:
-      - creation_date
-    name_column: creation_date
-    sort_column: creation_date
-    time_unit: day
-  - unique_name: Year
-    label: Year
-    contains_unique_names: false
-    dataset: query_log
-    is_unique_key: false
-    key_columns:
-      - Year
-    name_column: YearName
-    sort_column: Year
-    time_unit: year
 type: time

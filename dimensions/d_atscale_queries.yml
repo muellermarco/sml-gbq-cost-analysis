@@ -1,4 +1,4 @@
-unique_name: dim_atscale_queries
+unique_name: d_atscale_queries
 object_type: dimension
 label: Dim AtScale Queries
 hierarchies:
@@ -12,7 +12,7 @@ level_attributes:
   - unique_name: atscale_query
     label: AtScale Query
     contains_unique_names: false
-    dataset: twinpines_queries
+    dataset: atscale_queries
     is_unique_key: false
     key_columns:
       - subquery_subqueryId
@@ -20,7 +20,7 @@ level_attributes:
   - unique_name: main_modelId
     label: main_modelId
     contains_unique_names: false
-    dataset: twinpines_queries
+    dataset: atscale_queries
     is_unique_key: false
     key_columns:
       - main_modelId
@@ -28,7 +28,7 @@ level_attributes:
   - unique_name: main_catalogId
     label: Catalog
     contains_unique_names: false
-    dataset: twinpines_queries
+    dataset: atscale_queries
     is_unique_key: false
     key_columns:
       - main_catalogId
