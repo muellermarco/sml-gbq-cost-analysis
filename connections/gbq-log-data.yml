@@ -1,6 +1,6 @@
 unique_name: gbq-log-data
 object_type: connection
 label: gbq-log-data
-as_connection: gbq
-database: atscale-sales-demo
-schema: mm_dataset
+as_connection: glb-semanticlayerpoc-dev
+database: glb-semanticlayerpoc-dev
+schema: atscale_aggregates
