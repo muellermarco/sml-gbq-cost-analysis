@@ -7,36 +7,38 @@ columns:
   - name: event_startTime
     data_type: datetime
   - name: event_duration
-    data_type: long
-  - name: event_queryId
-    data_type: string
-  - name: main_traceId
-    data_type: string
-  - name: main_queryId
-    data_type: string
-  - name: main_startTime
-    data_type: datetime
-  - name: main_duration
-    data_type: long
-  - name: main_modelId
-    data_type: string
-  - name: main_catalogId
-    data_type: string
-  - name: main_userId
-    data_type: string
-  - name: main_queryType
-    data_type: string
-  - name: main_catalogName
-    data_type: string
-  - name: main_modelName
-    data_type: string
-  - name: main_user
-    data_type: string
+    data_type: double
   - name: subquery_subqueryId
     data_type: string
   - name: subquery_name
     data_type: string
   - name: subquery_duration
     data_type: double
-connection_id: gbq-log-data
-table: twinpines_queries
+  - name: status
+    data_type: string
+  - name: modelName
+    data_type: string
+  - name: catalogName
+    data_type: string
+  - name: user
+    data_type: string
+  - name: queryId
+    data_type: string
+  - name: startTime
+    data_type: datetime
+  - name: duration
+    data_type: long
+  - name: attributes
+    data_type: string
+  - name: measures
+    data_type: string
+  - name: aggregates
+    data_type: string
+  - name: optimization
+    data_type: string
+  - name: failedMessage
+    data_type: string
+  - name: subquery_startTime
+    data_type: datetime
+connection_id: con_glb-semanticlayerpoc-dev_atscale_aggregates
+table: atsclae_query_log

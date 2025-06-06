@@ -5,14 +5,23 @@ dimensions:
   - d_user_atscale
   - d_date
 metrics:
-  - unique_name: m_total_bytes_processed_sum
-  - unique_name: m_total_slot_ms_sum
+  - unique_name: Total Bytes Processed
+  - unique_name: Total Slot Ms
+  - unique_name: Duration
 relationships:
   - unique_name: query_log_AtScaleQueryId_to_dim_atscale_queries_atscale_query
     from:
       dataset: bigquery_information_schema_log
       join_columns:
         - AtScaleQueryId
+    to:
+      dimension: d_atscale_queries
+      level: atscale_query
+  - unique_name: atscale_queries_queryId_to_d_atscale_queries_atscale_query
+    from:
+      dataset: atscale_queries
+      join_columns:
+        - queryId
     to:
       dimension: d_atscale_queries
       level: atscale_query

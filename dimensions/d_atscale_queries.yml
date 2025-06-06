@@ -15,22 +15,24 @@ level_attributes:
     dataset: atscale_queries
     is_unique_key: false
     key_columns:
-      - subquery_subqueryId
-    name_column: subquery_subqueryId
+      - queryId
+    name_column: queryId
   - unique_name: main_modelId
     label: main_modelId
     contains_unique_names: false
     dataset: atscale_queries
     is_unique_key: false
     key_columns:
-      - main_modelId
-    name_column: main_modelName
+      - modelName
+    name_column: modelName
+    sort_column: modelName
   - unique_name: main_catalogId
     label: Catalog
     contains_unique_names: false
     dataset: atscale_queries
     is_unique_key: false
     key_columns:
-      - main_catalogId
-    name_column: main_catalogName
+      - catalogName
+    name_column: catalogName
+    sort_column: catalogName
 type: standard
