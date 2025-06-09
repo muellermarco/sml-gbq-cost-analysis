@@ -40,5 +40,8 @@ columns:
     data_type: string
   - name: subquery_startTime
     data_type: datetime
+  - name: queryId_trim
+    data_type: string
+    sql: trim(queryId)
 connection_id: con_glb-semanticlayerpoc-dev_atscale_aggregates
 table: atsclae_query_log
