@@ -5,11 +5,11 @@ hierarchies:
   - unique_name: atscale_queries_hierarchy
     label: AtScale Queries Hierarchy
     levels:
-      - unique_name: main_catalogId
-      - unique_name: main_modelId
-      - unique_name: atscale_query
+      - unique_name: Catalog
+      - unique_name: Model
+      - unique_name: AtScale Query
 level_attributes:
-  - unique_name: atscale_query
+  - unique_name: AtScale Query
     label: AtScale Query
     contains_unique_names: false
     dataset: atscale_queries
@@ -17,16 +17,17 @@ level_attributes:
     key_columns:
       - queryId
     name_column: queryId
-  - unique_name: main_modelId
-    label: main_modelId
+  - unique_name: Model
+    label: Model
     contains_unique_names: false
     dataset: atscale_queries
     is_unique_key: false
     key_columns:
       - modelName
+      - catalogName
     name_column: modelName
     sort_column: modelName
-  - unique_name: main_catalogId
+  - unique_name: Catalog
     label: Catalog
     contains_unique_names: false
     dataset: atscale_queries
