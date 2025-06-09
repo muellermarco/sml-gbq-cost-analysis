@@ -1,0 +1,18 @@
+unique_name: Atscale_Build
+object_type: dimension
+label: Atscale Build
+hierarchies:
+  - unique_name: Atscale_Build_Hierarchy
+    label: Atscale Build Hierarchy
+    levels:
+      - unique_name: Atscale_Build_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Atscale_Build_Level
+    label: Atscale Build Level
+    contains_unique_names: false
+    dataset: bigquery_information_schema_log
+    key_columns:
+      - atscale_build
+    name_column: atscale_build
+type: standard
