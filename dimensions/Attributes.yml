@@ -1,0 +1,18 @@
+unique_name: Attributes
+object_type: dimension
+label: Attributes
+hierarchies:
+  - unique_name: Attributes_Hierarchy
+    label: Attributes Hierarchy
+    levels:
+      - unique_name: Attributes_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Attributes_Level
+    label: Attributes Level
+    contains_unique_names: false
+    dataset: atscale_queries
+    key_columns:
+      - attributes
+    name_column: attributes
+type: standard

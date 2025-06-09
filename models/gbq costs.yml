@@ -7,6 +7,11 @@ dimensions:
   - d_date
   - Event_Name
   - Optimization
+  - Aggregates
+  - Failed_Message
+  - Attributes
+  - d_Measures
+  - Status
 metrics:
   - unique_name: Total Bytes Processed
   - unique_name: Total Slot Ms
