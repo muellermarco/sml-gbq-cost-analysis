@@ -1,0 +1,18 @@
+unique_name: Event_Name
+object_type: dimension
+label: Event Name
+hierarchies:
+  - unique_name: Event_Name_Hierarchy
+    label: Event Name Hierarchy
+    levels:
+      - unique_name: Event_Name_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Event_Name_Level
+    label: Event Name Level
+    contains_unique_names: false
+    dataset: atscale_queries
+    key_columns:
+      - event_name
+    name_column: event_name
+type: standard
