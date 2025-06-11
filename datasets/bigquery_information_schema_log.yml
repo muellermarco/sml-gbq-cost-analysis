@@ -38,6 +38,12 @@ columns:
     data_type: long
   - name: second
     data_type: long
+  - name: atscale_build
+    data_type: long    
+  - name: Data_Billed_GB
+    data_type: long
+  - name: AtScaleQueryId_Trim
+    data_type: string       
 connection_id: con_glb-semanticlayerpoc-dev_atscale_aggregates
 sql: >
   SELECT
@@ -66,21 +72,13 @@ sql: >
     CASE When contains_substr(INF.query,"as_agg") then 1
     ELSE 0
     End as agg_hit
-  --destination_tables.project_id,
-  --referenced_tables.dataset_id,
-  --referenced_tables.table_id
+    destination_table.project_id,
+    destination_table.table_id,
+    CASE When contains_substr(destination_table.table_id, "as_agg_") then 1 else 0 end as atscale_build
   FROM
     `region-EU`.INFORMATION_SCHEMA.JOBS INF
   WHERE
-<<<<<<< HEAD
-
-  INF.user_email
-  in('atscale@glb-semanticlayerpoc-dev.iam.gserviceaccount.com')
-  and INF.total_bytes_billed > 0
-
-  ORDER BY creation_time  desc
-=======
-  INF.user_email in('atscale@glb-semanticlayerpoc-dev.iam.gserviceaccount.com') and 
+  INF.user_email in('atscale@semantic-project.iam.gserviceaccount.com') and 
   INF.total_bytes_billed > 0 
   ORDER BY creation_time  desc;
->>>>>>> cced581362ce30e1e724487d092a49391774598a
+
