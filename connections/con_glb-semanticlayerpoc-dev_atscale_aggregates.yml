@@ -1,0 +1,6 @@
+unique_name: con_glb-semanticlayerpoc-dev_atscale_aggregates
+object_type: connection
+label: con_glb-semanticlayerpoc-dev_atscale_aggregates
+as_connection: glb-semanticlayerpoc-dev
+database: glb-semanticlayerpoc-dev
+schema: atscale_aggregates

@@ -1,0 +1,18 @@
+unique_name: d_Measures
+object_type: dimension
+label: Measures
+hierarchies:
+  - unique_name: Measures_Hierarchy
+    label: Measures Hierarchy
+    levels:
+      - unique_name: Measures_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Measures_Level
+    label: Measures Level
+    contains_unique_names: false
+    dataset: atscale_queries
+    key_columns:
+      - measures
+    name_column: measures
+type: standard

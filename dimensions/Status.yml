@@ -1,0 +1,18 @@
+unique_name: Status
+object_type: dimension
+label: Status
+hierarchies:
+  - unique_name: Status_Hierarchy
+    label: Status Hierarchy
+    levels:
+      - unique_name: Status_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Status_Level
+    label: Status Level
+    contains_unique_names: false
+    dataset: atscale_queries
+    key_columns:
+      - status
+    name_column: status
+type: standard

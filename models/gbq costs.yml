@@ -3,16 +3,34 @@ object_type: model
 label: gbq costs
 dimensions:
   - d_user_atscale
+  - Atscale_Build
   - d_date
+  - Event_Name
+  - Optimization
+  - Aggregates
+  - Failed_Message
+  - Attributes
+  - d_Measures
+  - Status
 metrics:
-  - unique_name: m_total_bytes_processed_sum
-  - unique_name: m_total_slot_ms_sum
+  - unique_name: Total Bytes Processed
+  - unique_name: Total Slot Ms
+  - unique_name: Duration
+  - unique_name: Data Billed GB
 relationships:
   - unique_name: query_log_AtScaleQueryId_to_dim_atscale_queries_atscale_query
     from:
       dataset: bigquery_information_schema_log
       join_columns:
-        - AtScaleQueryId
+        - AtScaleQueryId_Trim
     to:
       dimension: d_atscale_queries
-      level: atscale_query
+      level: AtScale Query
+  - unique_name: atscale_queries_subquery_subqueryId_to_d_atscale_queries_AtScale Query
+    from:
+      dataset: atscale_queries
+      join_columns:
+        - subquery_subqueryId
+    to:
+      dimension: d_atscale_queries
+      level: AtScale Query

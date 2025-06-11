@@ -1,0 +1,7 @@
+unique_name: Duration
+object_type: metric
+label: Duration
+calculation_method: sum
+column: duration
+dataset: atscale_queries
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,7 @@
+unique_name: Data Billed GB
+object_type: metric
+label: Data Billed GB
+calculation_method: sum
+column: Data_Billed_GB
+dataset: bigquery_information_schema_log
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,18 @@
+unique_name: Optimization
+object_type: dimension
+label: Optimization
+hierarchies:
+  - unique_name: Optimization_Hierarchy
+    label: Optimization Hierarchy
+    levels:
+      - unique_name: Optimization_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Optimization_Level
+    label: Optimization Level
+    contains_unique_names: false
+    dataset: atscale_queries
+    key_columns:
+      - optimization
+    name_column: optimization
+type: standard

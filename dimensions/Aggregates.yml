@@ -1,0 +1,18 @@
+unique_name: Aggregates
+object_type: dimension
+label: Aggregates
+hierarchies:
+  - unique_name: Aggregates_Hierarchy
+    label: Aggregates Hierarchy
+    levels:
+      - unique_name: Aggregates_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Aggregates_Level
+    label: Aggregates Level
+    contains_unique_names: false
+    dataset: atscale_queries
+    key_columns:
+      - aggregates
+    name_column: aggregates
+type: standard
