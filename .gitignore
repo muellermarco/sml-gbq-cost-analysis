@@ -3,4 +3,5 @@
 .DS_Store
 #vs code files
 .vscode/
-csv/
+#ENV Files
+.ENV

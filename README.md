@@ -1,28 +1,41 @@
-# GBQ Costs Analysis
+# 📊 AtScale Cost Analysis
 
-This project offers the possibility to create an AtScale model based on the GBQ job log information. It can be used to create these analyses based on AtScale users and their queries. There is a sample application for this in the PowerBI folder
+This project integrates **AtScale** with **Google BigQuery** to enable enhanced analytics and querying capabilities based on consumptions on your data plattform. It includes extraction of AtScale query logs and BigQuery Information Schema exports.
 
-### Settings
+---
 
-**Add atscale engine prooperties**
+## 🚀 Features
 
-`query.includeComments.general.userId = True`
-`query.includeComments.general.queryId = True`
+- Extracts AtScale Query logs and stores in GBQ as a table
+- Extracts GBQ information schema records to allow connect to AtScale Query logs
+- Supports environment-based configuration
+- Uses secure service account integration
 
-**dataset settings**
+---
 
-- Adjust the dataset to the service accounts that is set for accessing AtScale to GBQ in the Warehouse connections
-- Set the path to your region. ex. region-EU
+## 📁 Environment Variables (`.env`)
 
+This project uses a `.env` file to configure access to AtScale and Google BigQuery. Create a file named `.env` in the project root and include the following variables:
 
-datasets/query_log.yaml
-```
-  FROM
-    'region-EU'.INFORMATION_SCHEMA.JOBS INF
-  WHERE
+```env
+# This file contains environment variables for the AtScale and Google BigQuery integration.
 
-  INF.user_email in('service_account1@myproject.iam.gserviceaccount.com','service_account2@myproject.iam.gserviceaccount.com')
-  and INF.total_bytes_billed > 0
+# AtScale configuration
+ATSCALE_URL=atscale.mycompany.com
+ATSCALE_CLIENT_SECRET=you can find this in keycloak->Clients->atscale-modeler->Credentials->Client Secret
+ATSCALE_USER=atscale_admin
+ATSCALE_USER_PASSWORD=password
 
-  ORDER BY creation_time  desc
-```
+# Google BigQuery configuration
+# Note: The service account file should be kept secure and not shared publicly.
+GBQ_SERVICE_ACCOUNT_FILE=/path/to/credentials.json
+GBQ_PROJECT_ID='gbq-project'
+GBQ_DATASET_ID='atscale_aggregates'
+GBQ_LOCATION='EU'
+
+# BigQuery project and dataset configuration for the AtScale Query Log and Aggregates
+GBQ_TABLE_ID_ATSCALE_QUERY_LOG='atsclae_query_log'
+
+# BigQuery project and dataset configuration for exported GBQ Information Schema
+GBQ_TABLE_ID_INFORMATION_SCHEMA='gbq_information_schema'
+GBQ_INFORMATION_SCHEMA_EXTRACT_CSV='/path/to/information_schema_extract.csv'
