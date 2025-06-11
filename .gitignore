@@ -1,0 +1,7 @@
+### AtSclae ###
+#MacOS files
+.DS_Store
+#vs code files
+.vscode/
+#ENV Files
+.ENV
