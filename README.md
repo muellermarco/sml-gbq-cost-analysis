@@ -18,9 +18,11 @@ This project integrates **AtScale** with **Google BigQuery** to enable enhanced 
 You will find two files in the Notebooks folder:
 
 **Notebooks/Extract AtScale Logs.ipynb**
-One is designed to read the AtScale logs via REST API and save them to a BigQuery table. The routine loads the entries incrementally so that only queries since the last load are reloaded. The notebook can thus be executed regularly in BigQuery using a scheduler.
+
+This is designed to read the AtScale logs via REST API and save them to a BigQuery table. The routine loads the entries incrementally so that only queries since the last load are reloaded. The notebook can thus be executed regularly in BigQuery using a scheduler.
 
 **Notebooks/Extract GBQ Information Schema Logs.ipynb**
+
 The second notebook is intended for use when there is no direct access to the Information Schema table. An extract via CSV can be imported into a BigQuery table using this notebook in order to proceed manually.
 
 ---
